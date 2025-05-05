@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: larger;
+    font-weight: 550;
+    text-align: center;
+    pointer-events: none;
+}
+
+.countdown-background {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, white 0%, white 10%, silver 15%, silver 30%, rgb(43, 43, 43) 40%, silver 60%, white 80%, black 100%);
+    background-size: cover;
+    z-index: -1; /* Ensure it stays behind other elements */
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 2em;
+    margin: 20px 0;
+    gap: 10px; /* Add spacing between items */
+}
+
+@media (max-width: 600px) {
+    #countdown {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.background-confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Assets/confetti.gif') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; /* Ensure it stays behind other elements */
+    opacity: 0.2; /* Adjust opacity for a subtle effect */
+}
+
+#background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Assets/pic1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -10; /* Ensure it stays behind other elements */
+    opacity: 0.8; /* Adjust opacity for a subtle effect */
+}
+
+#background-colours1, #background-colours2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, red 0%, orange 10%, blue 20%, rgb(82, 227, 82) 40%, rgb(122, 204, 112) 50%, rgb(115, 132, 227) 65%, rgb(246, 97, 97) 80%, rgb(227, 199, 55) 100%);
+    background-size: cover;
+    z-index: -100; /* Ensure it stays behind other elements */
+    opacity: 0.5; /* Adjust opacity for a subtle effect */
+}
+
+#background-colours2 {
+    background: radial-gradient(circle at top right, red 0%, orange 10%, blue 20%, rgb(82, 227, 82) 40%, rgb(122, 204, 112) 50%, rgb(115, 132, 227) 65%, rgb(246, 97, 97) 80%, rgb(227, 199, 55) 100%);
+}
+
+#graduation-card {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#confetti1 {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    background: url('Assets/confetti.gif');
+    background-size: cover;
+    overflow: hidden;
+}
+
+#confetti {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: url('Assets/confetti1.gif');
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1;}
+}
+
+/* Add blinking effect for the 'Countdown to Graduation' text */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style for the blinking cursor */
+.blinking-cursor::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: black; /* Adjust cursor color */
+}
+
+/* Apply animation to the text */
+#countdown-section h1 {
+    animation: blink 1.5s infinite;
+}
