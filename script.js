@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Assets/pic3.jpg',
         'Assets/pic4.jpg',
         'Assets/pic1.jpg',
-        'Assets/pic5.jpg',
         'Assets/pic2.jpg',
+        'Assets/pic5.jpg',
         'Assets/confetti.gif'
     ];
 
