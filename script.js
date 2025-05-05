@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const graduationDate = new Date('2025-05-16T00:17:00'); // Set your graduation date here
+    const graduationDate = new Date('2025-05-29T00:17:00'); // Set your graduation date here
     const countdownSection = document.getElementById('countdown-section');
     const graduationCard = document.getElementById('graduation-card');
     const congratulations = document.getElementById('congratulations');
